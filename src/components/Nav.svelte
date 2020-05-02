@@ -56,23 +56,31 @@
       </a>
     </li>
     <li>
-      <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+      <a
+        aria-current={segment === 'technology' ? 'page' : undefined}
+        href="technology">
         Technology
       </a>
     </li>
     <li>
-      <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+      <a
+        aria-current={segment === 'interviews' ? 'page' : undefined}
+        href="interviews">
         Interviews
       </a>
     </li>
     <li>
-      <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+      <a
+        aria-current={segment === 'learnings' ? 'page' : undefined}
+        href="learnings">
         Learnings
       </a>
     </li>
     <li>
-      <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
-        Travelouges
+      <a
+        aria-current={segment === 'travelogue' ? 'page' : undefined}
+        href="travelogue">
+        Travelouge
       </a>
     </li>
 

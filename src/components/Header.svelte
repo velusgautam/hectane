@@ -13,6 +13,8 @@
 
 <header class="container margin-auto padding-left20 padding-right20">
   <h1 class="page--title">
-    {segment === undefined ? 'Home' : String(segment).toUpperCase()}
+    {segment === undefined ? 'Home' : String(segment)
+          .charAt(0)
+          .toUpperCase() + String(segment).slice(1)}
   </h1>
 </header>

@@ -1,6 +1,6 @@
 <script>
   export let post;
-  export let user;
+  export let author;
 </script>
 
 <style>
@@ -103,9 +103,9 @@
     </a>
 
     <div class="post--author">
-      <img class="img" src={user.avathar} alt="Velu S Gautam" />
+      <img class="img" src={author.avathar} alt="Velu S Gautam" />
       <div class="details">
-        <div class="name">{user.name}</div>
+        <div class="name">{author.name}</div>
         <div class="date">
           {new Date(post.createdDate)
             .toJSON()
