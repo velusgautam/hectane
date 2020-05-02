@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "__sapper__/build/index.js",
+      "use": "@now/node-server",
+      "config": {
+        "includeFiles": [
+          "build.json",
+          "../../package.json",
+          "../build/**",
+          "../../static/**",
+          "../../node_modules/**"
+        ],
+        "maxLambdaSize": "15mb"
+      }
+    },
+    {
+      "src": "static/**",
+      "use": "@now/static"
+    },
+    {
+      "src": "__sapper__/build/client/**",
+      "use": "@now/static"
+    }
+  ],
+  "routes": [
+    { "src": "/client/(.*)", "dest": "/__sapper__/build/client/$1" },
+    { "src": "/(.*(\\.css)|(\\.json)|(\\.png))", "dest": "/static/$1" },
+    { "src": "/(.*)", "dest": "/__sapper__/build/index.js" }
+  ]
+}
