@@ -90,14 +90,14 @@
 
 <div class="post--container">
 
-  <a href={`./blog/${post.route}`}>
+  <a href={`./blog/${post.route}`} rel="prefetch">
     <img
       class="post--title-image"
       src={`https://assets.hectane.com/${post.route}/listing.jpg`}
       alt={post.route} />
   </a>
   <div>
-    <a href={`./blog/${post.route}`} class="post--header">
+    <a href={`./blog/${post.route}`} class="post--header" rel="prefetch">
       <h3 class="post--title">{post.title}</h3>
       <p class="post--subTitle">{post.subTitle}</p>
     </a>

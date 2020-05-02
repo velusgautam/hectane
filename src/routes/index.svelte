@@ -1,7 +1,5 @@
 <script context="module">
   export async function preload({ path }) {
-    console.log("Path");
-    console.log(path);
     const res = await this.fetch("http://localhost:3200/posts/limit/7");
 
     const data = await res.json();
