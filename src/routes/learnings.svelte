@@ -1,29 +1,13 @@
 <script context="module">
+  import { getAuthors } from "../_helpers/get-authors.js";
   export async function preload({ path }, session) {
-    const res = await this.fetch(`http://localhost:3200/posts${path}/7`);
+    const res = await this.fetch(`https://backend.hectane.com/posts${path}/7`);
 
     const data = await res.json();
 
     // checking if data status is 200 and data is an array
     if (res.status === 200 && Array.isArray(data)) {
-      // creating a new set to hold unique author ids
-      const authorIds = new Set();
-
-      // creating unique author ids from the posts
-      data.forEach(d => authorIds.add(d.authorId));
-
-      // getting author data for all unique authors to avoid multi fetch
-      const authorData = await Promise.all(
-        Array.from(authorIds).map(async id => {
-          // feching author data
-          const res = await this.fetch(`http://localhost:3200/users/${id}`);
-          return res.json();
-        })
-      );
-
-      // creating a Map to hold unique authors by authorId as key
-      const authorMap = new Map(authorData.map(u => [u._id, u]));
-
+      const authorMap = await getAuthors(data, this.fetch);
       return { posts: data, authorMap };
     } else {
       this.error(res.status, data.message);

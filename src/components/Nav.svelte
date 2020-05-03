@@ -7,7 +7,15 @@
     /* border-bottom: 1px solid rgba(255, 62, 0, 0.1); */
     font-weight: 300;
     padding: 0 1em;
-    margin: 0 20px;
+    /* margin: 0 20px; */
+    grid-area: nav;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   ul {
@@ -46,11 +54,17 @@
     text-decoration: none;
     padding: 1em 0.5em;
     display: block;
+    color: var(--black);
   }
 </style>
 
 <div>
-  <h3 style="text-align:center">Hectane</h3>
+  <h3 style="text-align:center">
+    <picture>
+      <source srcset="logo.webp" type="image/webp" />
+      <img src="logo.png" alt="hectane logo" />
+    </picture>
+  </h3>
   <nav class="margin-auto container ">
     <ul>
       <li>

@@ -1,4 +1,5 @@
 <script>
+  import Author from "./Author.svelte";
   export let post;
   export let author;
 </script>
@@ -34,7 +35,7 @@
       margin-top: 0px;
     }
 
-    .listing--container :nth-child(1) .post--author {
+    :global(.listing--container :nth-child(1) .post--author) {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
       align-self: start;
@@ -58,7 +59,7 @@
     font-weight: 500;
   }
 
-  .post--author {
+  /* .post--author {
     display: flex;
     align-items: center;
     animation: falldown 1s ease;
@@ -73,7 +74,7 @@
   .details {
     font-size: small;
     margin-left: 8px;
-  }
+  } */
 
   @keyframes falldown {
     0% {
@@ -102,7 +103,7 @@
       <p class="post--subTitle">{post.subTitle}</p>
     </a>
 
-    <div class="post--author">
+    <!-- <div class="post--author">
       <img class="img" src={author.avathar} alt="Velu S Gautam" />
       <div class="details">
         <div class="name">{author.name}</div>
@@ -115,7 +116,11 @@
             .join('-')}
         </div>
       </div>
-    </div>
+    </div> -->
+    <Author
+      name={author.name}
+      avathar={author.avathar}
+      createdDate={post.createdDate} />
   </div>
 
 </div>
