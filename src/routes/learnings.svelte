@@ -1,7 +1,7 @@
 <script context="module">
   import { getAuthors } from "../_helpers/get-authors.js";
   export async function preload({ path }, session) {
-    const res = await this.fetch(`https://backend.hectane.com/posts${path}/7`);
+    const res = await this.fetch(`BASE_PATH/posts${path}/7`);
 
     const data = await res.json();
 

@@ -8,9 +8,7 @@
       authorMap = value;
     });
 
-    const res = await this.fetch(
-      `https://backend.hectane.com/posts/route/${params.slug}`
-    );
+    const res = await this.fetch(`BASE_PATH/posts/route/${params.slug}`);
     const data = await res.json();
 
     if (res.status === 200) {
@@ -25,9 +23,7 @@
 
       if (!authorMap.get(data.authorId)) {
         // getting author data for all unique authors to avoid multi fetch
-        const res = await this.fetch(
-          `https://backend.hectane.com/users/${data.authorId}`
-        );
+        const res = await this.fetch(`BASE_PATH/users/${data.authorId}`);
         authorData = await res.json();
 
         authors.update(map => {
@@ -72,7 +68,7 @@
   if (typeof fetch !== "function") {
     global.fetch = require("node-fetch");
   }
-  fetch(`https://backend.hectane.com/posts-meta-data/${post._id}`)
+  fetch(`BASE_PATH/posts-meta-data/${post._id}`)
     .then(response => response.json())
     .then(({ count }) => {
       pageViews = count;
@@ -183,17 +179,13 @@
   <meta name="twitter:creator" content="@velusgautam" />
   <meta name="twitter:title" content={post.title} />
   <meta name="twitter:description" content={post.subTitle} />
-  <meta
-    name="twitter:image"
-    content={`https://assets.hectane.com/${post.route}/title.jpg`} />
+  <meta name="twitter:image" content={`ASSET_BASE/${post.route}/title.jpg`} />
 
   <meta property="og:url" content={`https://hectane.com/blog/${post.route}`} />
   <meta property="og:type" content="article" />
   <meta property="og:title" content={post.title} />
   <meta property="og:description" content={post.subTitle} />
-  <meta
-    property="og:image"
-    content={`https://assets.hectane.com/${post.route}/title.jpg`} />
+  <meta property="og:image" content={`ASSET_BASE/${post.route}/title.jpg`} />
 </svelte:head>
 
 <div class="content">
@@ -201,32 +193,32 @@
   <h4 class="post--sub-title">{post.subTitle}</h4>
   <picture>
     <source
-      srcset={`https://assets.hectane.com/${post.route}/mobile.webp`}
+      srcset={`ASSET_BASE/${post.route}/mobile.webp`}
       media="(max-width: 420px)"
       type="image/webp" />
     <source
-      srcset={`https://assets.hectane.com/${post.route}/mobile.jpg`}
+      srcset={`ASSET_BASE/${post.route}/mobile.jpg`}
       media="(max-width: 420px)"
       type="image/jpg" />
     <source
-      srcset={`https://assets.hectane.com/${post.route}/listing.webp`}
+      srcset={`ASSET_BASE/${post.route}/listing.webp`}
       media="( max-width:799px)"
       type="image/webp" />
     <source
-      srcset={`https://assets.hectane.com/${post.route}/listing.jpg`}
+      srcset={`ASSET_BASE/${post.route}/listing.jpg`}
       media="(max-width:799px)"
       type="image/jpg" />
     <source
-      srcset={`https://assets.hectane.com/${post.route}/title.webp`}
+      srcset={`ASSET_BASE/${post.route}/title.webp`}
       media="(min-width: 800px)"
       type="image/webp" />
     <source
-      srcset={`https://assets.hectane.com/${post.route}/title.jpg`}
+      srcset={`ASSET_BASE/${post.route}/title.jpg`}
       media="(min-width: 800px)"
       type="image/jpg" />
     <img
       class="post-title-image"
-      src={`https://assets.hectane.com/${post.route}/title.jpg`}
+      src={`ASSET_BASE/${post.route}/title.jpg`}
       alt={post.title} />
   </picture>
   <div class="post--metadata">

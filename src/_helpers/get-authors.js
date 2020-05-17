@@ -9,8 +9,6 @@ export const getAuthors = async (data = [], fetch) => {
     authorMap = value;
   });
 
-  console.log(authorMap);
-
   // creating unique author ids from the posts
   data.forEach((d) => {
     if (!authorMap.get(d.authorId)) {
@@ -23,7 +21,7 @@ export const getAuthors = async (data = [], fetch) => {
     authorData = await Promise.all(
       Array.from(authorIds).map(async (id) => {
         // feching author data
-        const res = await fetch(`https://backend.hectane.com/users/${id}`);
+        const res = await fetch(`BASE_PATH/users/${id}`);
         return res.json();
       })
     );

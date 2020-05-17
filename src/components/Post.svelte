@@ -94,7 +94,7 @@
   <a href={`./blog/${post.route}`} rel="prefetch">
     <img
       class="post--title-image"
-      src={`https://assets.hectane.com/${post.route}/listing.jpg`}
+      src={`ASSET_BASE/${post.route}/listing.jpg`}
       alt={post.route} />
   </a>
   <div>
