@@ -18,9 +18,10 @@ body {
 p {
   letter-spacing: 0;
   font-weight: 400;
-  font-size: 1.125rem;
-  line-height: 1.8rem;
+  font-size: 1.25rem;
+  line-height: 1.68rem;
   color: var(--textBlack);
+  text-align: justify;
 }
 
 .padding-right20 {

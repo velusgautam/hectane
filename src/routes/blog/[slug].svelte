@@ -134,7 +134,7 @@
     margin-bottom: 1em;
     padding: 2% 4%;
     width: auto;
-    max-height: 900px;
+    /* max-height: 900px; */
     overflow: auto;
     font-size: 1.4em;
     line-height: 1.3em;
