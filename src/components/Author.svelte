@@ -24,8 +24,8 @@
 
   @keyframes falldown {
     0% {
-      opacity: 0;
-      transform: translateY(-50px);
+      opacity: 0.5;
+      transform: translateY(-1px);
     }
 
     100% {

@@ -4,35 +4,22 @@
 
 <style>
   nav {
-    /* border-bottom: 1px solid rgba(255, 62, 0, 0.1); */
     font-weight: 300;
     padding: 0 1em;
-    /* margin: 0 20px; */
     grid-area: nav;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    flex-wrap: wrap;
   }
 
   ul {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-  }
-
-  /* clearfix */
-  ul::after {
-    content: "";
-    display: block;
-    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: fit-content;
   }
 
   li {
-    display: block;
-    float: left;
+    list-style-type: none;
   }
 
   [aria-current] {
@@ -56,10 +43,20 @@
     display: block;
     color: var(--black);
   }
+
+  h3 {
+    text-align: center;
+    padding: 0px 15px;
+  }
+
+  h3 img {
+    width: 100%;
+    max-width: min-content;
+  }
 </style>
 
 <div>
-  <h3 style="text-align:center">
+  <h3>
     <picture>
       <source srcset="logo.webp" type="image/webp" />
       <img src="logo.png" alt="hectane logo" />
