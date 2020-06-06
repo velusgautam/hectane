@@ -132,7 +132,7 @@
 
   pre {
     margin-bottom: 1em;
-    padding: 2% 4%;
+    padding: 5%;
     width: auto;
     /* max-height: 900px; */
     overflow: auto;
