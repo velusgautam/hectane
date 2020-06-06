@@ -174,6 +174,7 @@
   <title>{post.title}</title>
   <meta name="keywords" content={post.subTitle} />
   <meta name="description" content={post.tags.join(', ')} />
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@_hectane" />
   <meta name="twitter:creator" content="@velusgautam" />
