@@ -145,7 +145,7 @@
   }
   .center {
     display: block;
-    margin: 0 auto;
+    margin: 50px auto;
     box-shadow: -3px 8px 10px #d8d8d8;
     width: 100%;
     max-width: -webkit-max-content;
@@ -167,6 +167,12 @@
 
   .post--metadata {
     margin-top: 10px;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--textblack);
   }
 </style>
 

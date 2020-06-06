@@ -11,3 +11,5 @@ None
 ### Changed
 
 - Added changelog to project [@velusgautam](https://github.com/velusgautam).
+- Updated header size [@velusgautam](https://github.com/velusgautam).
+- Updated highlight code style [@velusgautam](https://github.com/velusgautam).
