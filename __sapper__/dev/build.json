@@ -1,0 +1,45 @@
+{
+  "bundler": "rollup",
+  "shimport": "1.0.1",
+  "assets": {
+    "main": "client.e7b8c2be.js"
+  },
+  "css": {
+    "main": "main.717588979.css",
+    "chunks": {
+      "index.svelte": [
+        "client.e7b8c2be.css",
+        "Author.01272b36.css",
+        "Post.b0e31d5d.css"
+      ],
+      "interviews.svelte": [
+        "client.e7b8c2be.css",
+        "Author.01272b36.css",
+        "Post.b0e31d5d.css"
+      ],
+      "technology.svelte": [
+        "client.e7b8c2be.css",
+        "Author.01272b36.css",
+        "Post.b0e31d5d.css"
+      ],
+      "travelogue.svelte": [
+        "client.e7b8c2be.css",
+        "Author.01272b36.css",
+        "Post.b0e31d5d.css"
+      ],
+      "learnings.svelte": [
+        "client.e7b8c2be.css",
+        "Author.01272b36.css",
+        "Post.b0e31d5d.css"
+      ],
+      "about.svelte": [
+        "client.e7b8c2be.css"
+      ],
+      "blog/[slug].svelte": [
+        "[slug].6664ade9.css",
+        "client.e7b8c2be.css",
+        "Author.01272b36.css"
+      ]
+    }
+  }
+}
