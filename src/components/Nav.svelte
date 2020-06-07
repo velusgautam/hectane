@@ -101,7 +101,7 @@
           rel="prefetch"
           aria-current={segment === 'travelogue' ? 'page' : undefined}
           href="travelogue">
-          Travelouge
+          Travelogue
         </a>
       </li>
 
