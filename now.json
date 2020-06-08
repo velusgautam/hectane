@@ -27,6 +27,30 @@
   "routes": [
     { "src": "/client/(.*)", "dest": "/__sapper__/build/client/$1" },
     { "src": "/(.*(\\.css)|(\\.json)|(\\.png))", "dest": "/static/$1" },
+    {
+      "src": "/meeting-when-all-people-free",
+      "status": 301,
+      "headers": { "Location": "/blog/meeting-when-all-people-free" }
+    },
+    {
+      "src": "/how-to-create-and-publish-npm-package",
+      "status": 301,
+      "headers": { "Location": "/blog/how-to-create-and-publish-npm-package" }
+    },
+    {
+      "src": "/update-your-repository-from-original-repo",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/update-your-repository-from-original-repo"
+      }
+    },
+    {
+      "src": "/trip-to-see-northern-lights-at-abisko-sweden",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/trip-to-see-northern-lights-at-abisko-sweden"
+      }
+    },
     { "src": "/(.*)", "dest": "/__sapper__/build/index.js" }
   ]
 }
