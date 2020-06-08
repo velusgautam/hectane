@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - Fixed minor bugs and fixed typos.
 - Updated missing route redirection 💥
+- Bug fix for meta description :hammer:
 
 ## [1.0.1] - 2020-06-06
 
